@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,8 +6,12 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './control-flow.component.html',
-  styleUrl: './control-flow.component.scss'
+  styleUrl: './control-flow.component.scss',
 })
 export class ControlFlowComponent {
+  public showContent = signal<boolean>(false);
 
+  public toggleContent(): void {
+    this.showContent.update((value) => !value);
+  }
 }
