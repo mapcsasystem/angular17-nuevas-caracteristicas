@@ -15,7 +15,7 @@
 
   </div>
 
-  <!-- @Switch  -->
+  <!-- @switch  -->
   <div class="bg-white rounded shadow p-10">
     <h2 class="text-2xl font-bold mb-5">Switch: {{ grade() }}</h2>
     @switch (grade()) {
@@ -34,4 +34,32 @@
     }
 
   </div>
+
+  <!-- @for  -->
+  <div class="bg-white rounded shadow p-10">
+    <h2 class="text-2xl font-bold mb-5">Frameworks</h2>
+    <ul>
+
+      @for (item of frameworks(); track item;let i=$index,first=$first,last=$last,even=$even,odd=$odd,count=$count) {
+      <li [class]="{
+        'bg-red-200':even && !first && !last,
+        'bg-purple-300':odd && !first && !last,
+        'bg-blue-100':first || last,
+      }">{{ i+1 }}/{{count}} - {{ item }}</li>
+      }
+    </ul>
+  </div>
+
+  <div class="bg-white rounded shadow p-10">
+    <h2 class="text-2xl font-bold mb-5">Frameworks 2 vacio</h2>
+    <ul>
+      @for (item of frameworks2(); track item;let i=$index;) {
+      <li>{{ item }}</li>
+      }@empty {
+      <li>No Hay Framework</li>
+      }
+    </ul>
+
+  </div>
+
 </section>
