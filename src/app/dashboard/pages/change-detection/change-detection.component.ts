@@ -5,7 +5,7 @@ import {
   signal,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TitleComponent } from '../../../shared/title/title.component';
+import { TitleComponent } from '@shared/title/title.component';
 
 @Component({
   selector: 'app-change-detection',

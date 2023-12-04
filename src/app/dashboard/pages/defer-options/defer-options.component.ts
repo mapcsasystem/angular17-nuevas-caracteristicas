@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TitleComponent } from '../../../shared/title/title.component';
+import { TitleComponent } from '@shared/title/title.component';
 import { HeavyLoadersFastComponent } from '../../../shared/heavy-loaders/heavy-loaders-fast.component';
 
 @Component({
