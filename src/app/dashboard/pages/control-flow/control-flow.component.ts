@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TitleComponent } from '../../../shared/title/title.component';
+import { TitleComponent } from '@shared/title/title.component';
 
 type Grade = 'A' | 'B' | 'C' | 'F';
 
